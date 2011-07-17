@@ -1,0 +1,25 @@
+body {
+	min-width: 799px;
+	min-height: 700px;
+}
+
+#header,#menu,#content {
+	overflow: hidden;
+	display: inline-block
+}
+
+#header {
+	width: 100%
+}
+
+#menu,#content {
+	float: left
+}
+
+#menu {
+	width: 20%
+}
+
+#content {
+	width: 60%
+}
