@@ -1,24 +1,31 @@
 body {
-	min-width: 799px;
-	min-height: 700px;
+
+	background: #222222;
 }
 
 #header,#menu,#content {
 	overflow: hidden;
-	display: inline-block
+	display: inline-block;
+	background: #222222;
 }
 
 #header {
-	width: 100%
+	width: 100%;
 }
 
-#menu,#content, {
-	float: left
-}
-
-#previous, #next, #toggle{
+#menu,#content {
 	float: left;
-	margin-right: 10px;
+}
+
+#gallery {
+	float: left;
+}
+#previous,#next,#toggle {
+	float: left;
+	margin-left: 10px;
+	margin-top: 10px;
+	color: white;
+	background: #222222;
 }
 
 #menu {

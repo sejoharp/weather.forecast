@@ -14,12 +14,12 @@ $(document)
 
 						Galleria.loadTheme('js/galleria.classic.js');
 						$("#gallery").galleria({
-							width : 800,
-							height : 700,
+							width : 820,
+							height : 740,
 							maxScaleRatio: 1,
 							minScaleRatio: 1,
 							showCounter: false,
-							showImagenav: false,
+							showImagenav: true,
 							extend: function() {
 						        var gallery = this;
 								$('#next').click(function() {
