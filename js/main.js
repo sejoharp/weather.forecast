@@ -19,7 +19,9 @@ $(document)
 							maxScaleRatio: 1,
 							minScaleRatio: 1,
 							showCounter: false,
-							showImagenav: true,
+							showImagenav: false,
+							transition: "fade",
+							transitionSpeed: 1000,
 							extend: function() {
 						        var gallery = this;
 								$('#next').click(function() {
@@ -32,7 +34,7 @@ $(document)
 								$('#toggle').click(function() {
 									var button = $("#toggle");
 									if (button.text() == "play"){
-										gallery.play(1000);
+										gallery.play(2000);
 										button.text("stop");
 									}else{
 										gallery.pause();
