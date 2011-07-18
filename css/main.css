@@ -12,8 +12,13 @@ body {
 	width: 100%
 }
 
-#menu,#content {
+#menu,#content, {
 	float: left
+}
+
+#previous, #next, #toggle{
+	float: left;
+	margin-right: 10px;
 }
 
 #menu {
