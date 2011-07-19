@@ -1,11 +1,9 @@
-$(document)
-		.ready(
-				function() {
-					var target = "http://www.wetterzentrale.de/topkarten/tkgfsmeur.htm?was=3&wann=00";
-					show_gallery(target, "#rainfall-gallery", "#rainfall-next", "#rainfall-previous", "#rainfall-toggle");
-				});
-
-function show_gallery(target, gallery, next, previous, toggle){
+function show_gallery(target, name){
+	var base = "#" + name;
+	var gallery = base + "-gallery";
+	var next = base + "-next";
+	var previous = base + "-previous";
+	var toggle = base + "-toggle";
 	$.get(target, function(res) {
 		var array = $(res.responseText).next().next().next()
 				.next().next().last().find("a");
@@ -54,3 +52,25 @@ function init_galleria(gallery, next, previous, toggle){
 
 	});
 }
+
+$(document)
+.ready(
+		function() {
+			$("#rainfall").hide();
+			$("#temperature").hide();
+			
+			$("#show_rainfall").click(function() {
+				$("#rainfall").toggle();
+				if ($("#rainfall").css('display') == 'block'){
+					$(".galleria-container").remove();
+					show_gallery("http://www.wetterzentrale.de/topkarten/tkgfsmeur.htm?was=3&wann=00", "rainfall");	
+				}
+			});
+			$("#show_temperature").click(function() {
+				$("#temperature").toggle();
+				if ($("#temperature").css('display') == 'block'){
+					$(".galleria-container").remove();
+					show_gallery("http://www.wetterzentrale.de/topkarten/tkgfsmeur.htm?was=4&wann=00", "temperature");
+				}
+			});
+});
