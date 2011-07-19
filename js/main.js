@@ -33,23 +33,23 @@ function init_galleria(gallery, next, previous, toggle){
 		transition: "fade",
 		transitionSpeed: 1000,
 		extend: function() {
-	        var gallery = this;
+	        var galleria = this;
 			$(next).click(function() {
-				gallery.next();
-				});
+				galleria.next();
+			});
 			$(previous).click(function() {
-				gallery.prev();
-				});
+				galleria.prev();
+			});
 			$(toggle).click(function() {
 				var button = $(toggle);
 				if (button.text() == "play"){
-					gallery.play(2000);
+					galleria.play(2000);
 					button.text("stop");
 				}else{
-					gallery.pause();
+					galleria.pause();
 					button.text("play");
 				}
-				});
+			});
 	    }
 
 	});
