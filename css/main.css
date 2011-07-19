@@ -14,7 +14,7 @@ body {
 	height: 53px;
 }
 
-#details {
+.images {
 	border-color: white;
 	border-width: 2px;
 	border-style: solid;
@@ -22,15 +22,11 @@ body {
 	clear:both;
 }
 
-#menu,#content {
-	float: left;
+.float-left{
+		float: left;
 }
 
-#gallery {
-	float: left;
-}
-
-#previous,#next,#toggle {
+.navigation {
 	float: left;
 	padding-top: 20px;
 	padding-left: 25px;
