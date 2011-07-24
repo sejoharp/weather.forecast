@@ -2,12 +2,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title id="page-title">weather.forecast</title>
-
 <link rel="stylesheet" href="css/main.css" type="text/css"
 	media="screen" />
-<link rel="stylesheet" href="css/tn3.css" type="text/css"
-	media="screen" />
-
+<link rel="stylesheet" href="css/tn3.css" type="text/css" media="screen" />
 <script type="text/javascript"
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
 <script type="text/javascript" src="js/jquery.xdomainajax.js"></script>
@@ -15,12 +12,22 @@
 <script type="text/javascript" src="js/jquery.tn3lite.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 </head>
-
 <body>
-	<!-- 	<div style="height: 700px; width: 799px;"> -->
-	<div class="gallery">
-		<div id="images" class="tn3 album"></div>
+	<div id="header">
+		<h3>weather forecast for middle europe</h3>
 	</div>
-	<!-- 	</div> -->
+	<div id="menu" class="float-left">
+		<h3>menu</h3>
+		<div id="showRain">rainfall</div>
+		<div id="showTemp">temperature</div>
+	</div>
+	<div id="content" class="float-left">
+		<div id="rain-gallery" class="gallery">
+			<div id="rain-images" class="tn3 album"></div>
+		</div>
+		<div id="temp-gallery" class="gallery">
+			<div id="temp-images" class="tn3 album"></div>
+		</div>
+	</div>
 </body>
 </html>
