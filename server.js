@@ -14,12 +14,27 @@ var sys = require('sys'), http = require('http');
  * 
  * request.end();
  */
-var http = require('http');
-http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('Hello World\n');
-}).listen(1337, "127.0.0.1");
-console.log('Server running at http://127.0.0.1:1337/');
+
+function parseHtml(html) {
+	var links = [];
+	var window = require('jsdom').jsdom(html, null, {
+		FetchExternalResources : false,
+		ProcessExternalResources : false,
+		MutationEvents : false,
+		QuerySelector : false
+	}).createWindow();
+	var $ = require('jquery').create(window);
+
+	$("table").filter(":odd").find("a").each(
+			function(el) {
+				if ($(this).attr('href') && $(this).attr('href').search("was=3") != -1) {
+					var value = $(this).attr('href');
+					var link = "http://www.wetterzentrale.de" + value.toString().split('.')[4] + ".gif";
+					console.log(link);
+					links.push("<li><a href=\"" + link + "\"><img title=\"\" alt=\"\" src=\"" + link + "\"></a></li>");
+				}
+			});
+}
 
 var options = {
 	host : 'www.wetterzentrale.de',
@@ -35,7 +50,7 @@ var req = http.get(options, function(res) {
 	});
 	res.on('end', function(chunk) {
 		console.log("fertig geladen");
-		console.log(data);
+		parseHtml(data);
 	});
 	res.on('error', function(e) {
 		console.log('problem with request: ' + e.message);
