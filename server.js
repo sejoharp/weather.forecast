@@ -34,6 +34,7 @@ function parseHtml(html) {
 					links.push("<li><a href=\"" + link + "\"><img title=\"\" alt=\"\" src=\"" + link + "\"></a></li>");
 				}
 			});
+	return links;
 }
 
 var options = {
@@ -41,15 +42,15 @@ var options = {
 	port : 80,
 	path : '/topkarten/tkgfsmeur.htm?was=3&wann=00',
 };
-var data = "";
+
 
 var req = http.get(options, function(res) {
+	var data = "";
 	res.setEncoding('utf8');
 	res.on('data', function(chunk) {
 		data += chunk;
 	});
 	res.on('end', function(chunk) {
-		console.log("fertig geladen");
 		parseHtml(data);
 	});
 	res.on('error', function(e) {
