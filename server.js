@@ -27,7 +27,7 @@ function parseHtml(html) {
 
 	$("table").filter(":odd").find("a").each(
 			function(el) {
-				if ($(this).attr('href') && $(this).attr('href').search("was=3") != -1) {
+				if ($(this).attr('href')) {
 					var value = $(this).attr('href');
 					var link = "http://www.wetterzentrale.de" + value.toString().split('.')[4] + ".gif";
 					console.log(link);
