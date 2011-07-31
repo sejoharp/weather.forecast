@@ -1,4 +1,6 @@
-var sys = require('sys'), http = require('http');
+var sys = require('sys');
+var http = require('http');
+var jquery = require('jquery');
 
 /*
  * var connection = http.createClient(80, 'www.wetterzentrale.de'), request =
@@ -23,16 +25,17 @@ function parseHtml(html) {
 		MutationEvents : false,
 		QuerySelector : false
 	}).createWindow();
-	var $ = require('jquery').create(window);
+	var $ = jquery.create(window);
 
 	$("table").filter(":odd").find("a").each(
 			function(el) {
-				if ($(this).attr('href')) {
-					var value = $(this).attr('href');
-					var link = "http://www.wetterzentrale.de" + value.toString().split('.')[4] + ".gif";
-					console.log(link);
-					links.push("<li><a href=\"" + link + "\"><img title=\"\" alt=\"\" src=\"" + link + "\"></a></li>");
-				}
+				var value = $(this).attr('href');
+				var link = "http://www.wetterzentrale.de"
+						+ value.toString().split('.')[4] + ".gif";
+				console.log(link);
+				links.push("<li><a href=\"" + link
+						+ "\"><img title=\"\" alt=\"\" src=\"" + link
+						+ "\"></a></li>");
 			});
 	return links;
 }
@@ -42,7 +45,6 @@ var options = {
 	port : 80,
 	path : '/topkarten/tkgfsmeur.htm?was=3&wann=00',
 };
-
 
 var req = http.get(options, function(res) {
 	var data = "";
