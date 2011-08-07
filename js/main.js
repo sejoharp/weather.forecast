@@ -1,59 +1,90 @@
-function startGallery(target, imageDiv, galleryDiv) {
-	$.get(target, function(res) {
-		var array = $(res.responseText).next().next().next().next().next()
-				.last().find("a");
-		jQuery.each(array, function(index, value) {
-			var link = "http://www.wetterzentrale.de"
-					+ value.toString().split('.')[4] + ".gif";
-			$(imageDiv).append(
-					"<li><a href=\"" + link
-							+ "\"><img title=\"\" alt=\"\" src=\"" + link
-							+ "\"></a></li>");
-		});
-		$(galleryDiv).tn3({
-			autoplay : false,
-			delay : 2000,
-			thumbnailer : {
-				overMove : false
-			},
-			image : {
-				transitions : [ {
-					type : "fade",
-					duration : 250
-				}, ]
-			},
-			skinDir : "img",
-		});
-	});
+hs.graphicsDir = '../img/';
+hs.transitions = [ 'expand', 'crossfade' ];
+hs.restoreCursor = null;
+hs.lang.restoreTitle = 'Click for next image';
+
+// Add the slideshow providing the controlbar and the thumbstrip
+hs.addSlideshow({
+	// slideshowGroup: 'group1',
+	interval : 2000,
+	repeat : true,
+	useControls : true,
+	overlayOptions : {
+		position : 'bottom right',
+		offsetY : 50
+	},
+	thumbstrip : {
+		position : 'above',
+		mode : 'horizontal',
+		relativeTo : 'expander'
+	}
+});
+
+// Options for the in-page items
+var inPageOptions = {
+	// slideshowGroup: 'group1',
+	outlineType : null,
+	allowSizeReduction : false,
+	wrapperClassName : 'in-page controls-in-heading',
+	thumbnailId : 'gallery-area',
+	useBox : true,
+	width : 600,
+	height : 400,
+	targetX : 'gallery-area 10px',
+	targetY : 'gallery-area 10px',
+	captionEval : 'this.a.title',
+	numberPosition : 'caption'
 }
 
-$(document)
-		.ready(
-				function() {
-					$("#rain-gallery").hide();
-					$("#temp-gallery").hide();
-					$("#showRain")
-							.click(
-									function() {
-										if ($("#rain-gallery").css('display') == 'none'
-												&& $("#rain-images").size() < 2) {
-											startGallery(
-													"http://www.wetterzentrale.de/topkarten/tkgfsmeur.htm?was=3&wann=00",
-													"#rain-images",
-													"#rain-gallery");
-										}
-										$("#rain-gallery").toggle();
-									});
-					$("#showTemp")
-							.click(
-									function() {
-										if ($("#temp-gallery").css('display') == 'none'
-												&& $("#temp-images").size() < 2) {
-											startGallery(
-													"http://www.wetterzentrale.de/topkarten/tkgfsmeur.htm?was=4&wann=00",
-													"#temp-images",
-													"#temp-gallery");
-										}
-										$("#temp-gallery").toggle();
-									});
-				});
+// Open the first thumb on page load
+hs.addEventListener(window, 'load', function() {
+	document.getElementById('thumb1').onclick();
+});
+
+// Cancel the default action for image click and do next instead
+hs.Expander.prototype.onImageClick = function() {
+	if (/in-page/.test(this.wrapper.className))
+		return hs.next();
+}
+
+// Under no circumstances should the static popup be closed
+hs.Expander.prototype.onBeforeClose = function() {
+	if (/in-page/.test(this.wrapper.className))
+		return false;
+}
+// ... nor dragged
+hs.Expander.prototype.onDrag = function() {
+	if (/in-page/.test(this.wrapper.className))
+		return false;
+}
+
+// Keep the position after window resize
+hs.addEventListener(window, 'resize', function() {
+	var i, exp;
+	hs.getPageSize();
+
+	for (i = 0; i < hs.expanders.length; i++) {
+		exp = hs.expanders[i];
+		if (exp) {
+			var x = exp.x, y = exp.y;
+
+			// get new thumb positions
+			exp.tpos = hs.getPosition(exp.el);
+			x.calcThumb();
+			y.calcThumb();
+
+			// calculate new popup position
+			x.pos = x.tpos - x.cb + x.tb;
+			x.scroll = hs.page.scrollLeft;
+			x.clientSize = hs.page.width;
+			y.pos = y.tpos - y.cb + y.tb;
+			y.scroll = hs.page.scrollTop;
+			y.clientSize = hs.page.height;
+			exp.justify(x, true);
+			exp.justify(y, true);
+
+			// set new left and top to wrapper and outline
+			exp.moveTo(x.pos, y.pos);
+		}
+	}
+});

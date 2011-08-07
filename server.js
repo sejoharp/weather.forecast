@@ -1,21 +1,8 @@
 var sys = require('sys');
 var http = require('http');
 var jquery = require('jquery');
+var express = require('express');
 
-/*
- * var connection = http.createClient(80, 'www.wetterzentrale.de'), request =
- * connection.request("GET",'/topkarten/tkgfsmeur.htm?was=3&wann=00');
- * 
- * connection.addListener('error', function(connectionException){
- * sys.log(connectionException); });
- * 
- * request.addListener('response', function(response){ var data = '';
- * 
- * response.addListener('data', function(chunk){ data += chunk; });
- * response.addListener('end', function(){ console.log(data); }); });
- * 
- * request.end();
- */
 
 function parseHtml(html) {
 	var links = [];
@@ -32,30 +19,49 @@ function parseHtml(html) {
 				var value = $(this).attr('href');
 				var link = "http://www.wetterzentrale.de"
 						+ value.toString().split('.')[4] + ".gif";
-				console.log(link);
-				links.push("<li><a href=\"" + link
+				var href = "<a href=\"" + link
 						+ "\"><img title=\"\" alt=\"\" src=\"" + link
-						+ "\"></a></li>");
+						+ "\"></a>";
+				links.push(href);
 			});
 	return links;
 }
 
-var options = {
-	host : 'www.wetterzentrale.de',
-	port : 80,
-	path : '/topkarten/tkgfsmeur.htm?was=3&wann=00',
-};
+function returnLinks(options, response) {
+	http.get(options, function(res) {
+		var data = "";
+		res.setEncoding('utf8');
+		res.on('data', function(chunk) {
+			data += chunk;
+		});
+		res.on('end', function(chunk) {
+			var links = parseHtml(data);
+			var linksJSON = JSON.stringify(links);
+			response.contentType('application/json');
+			response.send(linksJSON);
+		});
+		res.on('error', function(e) {
+			console.log('problem with request: ' + e.message);
+		});
+	});
+}
 
-var req = http.get(options, function(res) {
-	var data = "";
-	res.setEncoding('utf8');
-	res.on('data', function(chunk) {
-		data += chunk;
-	});
-	res.on('end', function(chunk) {
-		parseHtml(data);
-	});
-	res.on('error', function(e) {
-		console.log('problem with request: ' + e.message);
-	});
+var app = express.createServer();
+app.get('/rain.json', function(request, response) {
+	var options = {
+		host : 'www.wetterzentrale.de',
+		port : 80,
+		path : '/topkarten/tkgfsmeur.htm?was=3&wann=00',
+	};
+	returnLinks(options, response);
 });
+app.get('/temperature.json', function(request, response) {
+	var options = {
+		host : 'www.wetterzentrale.de',
+		port : 80,
+		path : '/topkarten/tkgfsmeur.htm?was=4&wann=00',
+	};
+	returnLinks(options, response);
+});
+app.listen(3000);
+
