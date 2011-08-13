@@ -19,7 +19,7 @@ function parseHtml(html) {
 				var value = $(this).attr('href');
 				var link = "http://www.wetterzentrale.de"
 						+ value.toString().split('.')[4] + ".gif";
-				var href = "<a href=\"" + link
+				var href = "<a class=\"highslide\" href=\"" + link
 						+ "\"><img title=\"\" alt=\"\" src=\"" + link
 						+ "\"></a>";
 				links.push(href);
