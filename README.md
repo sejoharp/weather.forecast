@@ -5,4 +5,4 @@ This page displays the weather forecast for middle europe. It uses the infos fro
 * http://www.wetterzentrale.de
 * jquery
 * Yahoo! Query Language
-* tn3 gallery  
+* highslide  
