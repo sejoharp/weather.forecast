@@ -7,4 +7,4 @@ app.use("/css", express.static(__dirname + '/web/css'));
 app.get('/', function(req, res){
 	res.sendfile('web/weather.forecast.html');
 });
-app.listen(8000);
+app.listen(process.env.PORT || 8001);
