@@ -63,5 +63,49 @@ app.get('/temperature.json', function(request, response) {
 	};
 	returnLinks(options, response);
 });
+app.get('/low-air-pressure.json', function(request, response) {
+
+	var options = {
+
+		host : 'www.wetterzentrale.de',
+
+		port : 80,
+
+		path : '/topkarten/tkgfsmeur.htm?was=12&wann=00',
+
+	};
+
+	returnLinks(options, response);
+
+});
+app.get('/middle-air-pressure.json', function(request, response) {
+
+	var options = {
+
+		host : 'www.wetterzentrale.de',
+
+		port : 80,
+
+		path : '/topkarten/tkgfsmeur.htm?was=11&wann=00',
+
+	};
+
+	returnLinks(options, response);
+
+});
+app.get('/high-air-pressure.json', function(request, response) {
+
+	var options = {
+
+		host : 'www.wetterzentrale.de',
+
+		port : 80,
+
+		path : '/topkarten/tkgfsmeur.htm?was=10&wann=00',
+
+	};
+
+	returnLinks(options, response);
+});
 app.listen(3000);
 

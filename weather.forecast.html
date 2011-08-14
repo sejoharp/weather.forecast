@@ -26,11 +26,9 @@
 	hs.width = 600;
 	hs.height = 400;
 	hs.numberOfImagesToPreload = 5;
-	//hs.dimmingOpacity = 0.8;
 	
 	// Add the slideshow providing the controlbar and the thumbstrip
 hs.addSlideshow({
-	//slideshowGroup: 'group1',
 	interval: 2000,
 	repeat: false,
 	useControls: true,
@@ -46,36 +44,37 @@ hs.addSlideshow({
 // 		relativeTo: 'expander'
 // 	}
 });
-	// Options for the in-page items
+
 	var inPageOptionsRain = {
  		slideshowGroup : 'gallery-rain',
-// 		outlineType : null,
-// 		allowSizeReduction : true,
-// 		wrapperClassName : 'in-page controls-in-heading',
 		thumbnailId : 'rain',
-// 		useBox : false,
  		width : 799,
  		height : 700,
-// 		targetX : 'gallery-rain 10px',
-// 		targetY : 'gallery-rain 10px',
-// 		captionEval : 'this.a.title',
-// 		numberPosition : 'caption'
 	}
 	var inPageOptionsTemp = {
  		slideshowGroup : 'gallery-temp',
-// 		outlineType : null,
-// 		allowSizeReduction : false,
-// 		wrapperClassName : 'in-page controls-in-heading',
 		thumbnailId : 'temp',
-// 		useBox : false,
  		width : 799,
  		height : 700,
-// 		targetX : 'gallery-temp 10px',
-// 		targetY : 'gallery-temp 10px',
-// 		captionEval : 'this.a.title',
-// 		numberPosition : 'caption'
 	}
-
+	var lowAirPressure = {
+	 		slideshowGroup : 'gallery-lowAirPressure',
+			thumbnailId : 'lowAirPressure',
+	 		width : 799,
+	 		height : 700,
+		};
+	var middleAirPressure = {
+	 		slideshowGroup : 'gallery-middleAirPressure',
+			thumbnailId : 'middleAirPressure',
+	 		width : 799,
+	 		height : 700,
+		};
+	var highAirPressure = {
+	 		slideshowGroup : 'gallery-highAirPressure',
+			thumbnailId : 'highAirPressure',
+	 		width : 799,
+	 		height : 700,
+		};
 </script>
 </head>
 
@@ -84,140 +83,339 @@ hs.addSlideshow({
 		<h3>weather forecast for middle europe</h3>
 	</div>
 	<div id="menu" class="float-left">
-		<h3>menu</h3>
 		<a id="rain" class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs033.gif" onclick="return hs.expand(this, inPageOptionsRain)"><img width="300" height="214" src="http://www.wetterzentrale.de/pics/Rmgfs033.gif"></a> 
 		<a id="temp" class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs034.gif" onclick="return hs.expand(this, inPageOptionsTemp)"><img width="300" height="214" src="http://www.wetterzentrale.de/pics/Rmgfs034.gif"></a>
+		<a id="lowAirPressure" class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs0312.gif" onclick="return hs.expand(this, lowAirPressure)"><img width="300" height="214" src="http://www.wetterzentrale.de/pics/Rmgfs0312.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+		<a id="middleAirPressure" class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs0311.gif" onclick="return hs.expand(this, middleAirPressure)"><img width="300" height="214" src="http://www.wetterzentrale.de/pics/Rmgfs0311.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+		<a id="highAirPressure" class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs0310.gif" onclick="return hs.expand(this, highAirPressure)"><img width="300" height="214" src="http://www.wetterzentrale.de/pics/Rmgfs0310.gif" onclick="return hs.expand(this, highAirPressure)"></a>
 	</div>
 	<div id="content" class="float-left">
-	<div id="highslide-gallery">
-		<div class="hidden-container">
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs063.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs093.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs123.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs153.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs183.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs213.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs243.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs273.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs303.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs333.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs363.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs393.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs423.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs453.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs483.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs513.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs543.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs573.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs603.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs633.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs663.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs693.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs723.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs753.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs783.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs813.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs843.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs873.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs903.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs933.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs963.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs993.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1023.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1053.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1083.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1113.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1143.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1173.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1203.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1233.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1263.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1293.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1323.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1353.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1383.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1413.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1443.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1473.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1503.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1533.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1563.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1593.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1623.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1653.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1683.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1713.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1743.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1773.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1803.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1833.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1863.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1893.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>		
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs033.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a> 
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs064.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a> 
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs094.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs124.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs154.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs184.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs214.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs244.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs274.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs304.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs334.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs364.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs394.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs424.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs454.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs484.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs514.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs544.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs574.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs604.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs634.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs664.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs694.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs724.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs754.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs784.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs814.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs844.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs874.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs904.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs934.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs964.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs994.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1024.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1054.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1084.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1114.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1144.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1174.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1204.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1234.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1264.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1294.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1324.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1354.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1384.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1414.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1444.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1474.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1504.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1534.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1564.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1594.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1624.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1654.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1684.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1714.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1744.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1774.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1804.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1834.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1864.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1894.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-			<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs034.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
-		</div></div>
+		<div id="highslide-gallery">
+			<div class="hidden-container">
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs063.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs093.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs123.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs153.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs183.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs213.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs243.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs273.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs303.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs333.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs363.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs393.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs423.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs453.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs483.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs513.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs543.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs573.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs603.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs633.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs663.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs693.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs723.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs753.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs783.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs813.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs843.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs873.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs903.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs933.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs963.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs993.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1023.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1053.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1083.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1113.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1143.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1173.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1203.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1233.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1263.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1293.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1323.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1353.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1383.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1413.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1443.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1473.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1503.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1533.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1563.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1593.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1623.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1653.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1683.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1713.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1743.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1773.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1803.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1833.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1863.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1893.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a>		
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs033.gif" onclick="return hs.expand(this, inPageOptionsRain)"></a> 
+	
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs064.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a> 
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs094.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs124.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs154.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs184.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs214.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs244.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs274.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs304.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs334.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs364.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs394.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs424.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs454.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs484.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs514.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs544.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs574.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs604.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs634.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs664.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs694.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs724.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs754.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs784.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs814.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs844.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs874.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs904.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs934.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs964.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs994.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1024.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1054.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1084.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1114.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1144.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1174.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1204.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1234.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1264.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1294.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1324.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1354.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1384.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1414.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1444.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1474.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1504.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1534.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1564.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1594.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1624.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1654.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1684.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1714.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1744.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1774.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1804.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1834.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1864.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1894.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs034.gif" onclick="return hs.expand(this, inPageOptionsTemp)"></a>
+				
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs0612.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs0912.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1212.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1512.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1812.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs2112.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs2412.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs2712.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs3012.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs3312.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs3612.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs3912.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs4212.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs4512.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs4812.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs5112.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs5412.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs5712.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs6012.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs6312.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs6612.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs6912.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs7212.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs7512.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs7812.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs8112.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs8412.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs8712.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs9012.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs9312.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs9612.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs9912.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs10212.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs10512.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs10812.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs11112.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs11412.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs11712.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs12012.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs12312.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs12612.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs12912.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs13212.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs13512.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs13812.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs14112.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs14412.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs14712.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs15012.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs15312.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs15612.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs15912.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs16212.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs16512.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs16812.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs17112.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs17412.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs17712.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs18012.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs18312.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs18612.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs18912.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs0312.gif" onclick="return hs.expand(this, lowAirPressure)"></a>
+				
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs0611.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs0911.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1211.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1511.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1811.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs2111.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs2411.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs2711.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs3011.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs3311.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs3611.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs3911.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs4211.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs4511.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs4811.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs5111.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs5411.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs5711.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs6011.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs6311.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs6611.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs6911.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs7211.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs7511.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs7811.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs8111.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs8411.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs8711.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs9011.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs9311.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs9611.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs9911.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs10211.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs10511.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs10811.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs11111.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs11411.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs11711.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs12011.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs12311.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs12611.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs12911.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs13211.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs13511.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs13811.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs14111.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs14411.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs14711.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs15011.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs15311.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs15611.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs15911.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs16211.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs16511.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs16811.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs17111.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs17411.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs17711.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs18011.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs18311.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs18611.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs18911.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs0311.gif" onclick="return hs.expand(this, middleAirPressure)"></a>
+				
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs0610.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs0910.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1210.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1510.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs1810.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs2110.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs2410.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs2710.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs3010.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs3310.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs3610.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs3910.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs4210.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs4510.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs4810.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs5110.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs5410.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs5710.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs6010.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs6310.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs6610.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs6910.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs7210.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs7510.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs7810.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs8110.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs8410.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs8710.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs9010.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs9310.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs9610.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs9910.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs10210.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs10510.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs10810.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs11110.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs11410.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs11710.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs12010.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs12310.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs12610.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs12910.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs13210.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs13510.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs13810.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs14110.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs14410.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs14710.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs15010.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs15310.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs15610.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs15910.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs16210.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs16510.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs16810.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs17110.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs17410.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs17710.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs18010.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs18310.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs18610.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs18910.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+				<a class="highslide" href="http://www.wetterzentrale.de/pics/Rmgfs0310.gif" onclick="return hs.expand(this, highAirPressure)"></a>
+			</div>
+		</div>
+	</div>
+	<div id="menu" class="float-left">
+		<h3>all images are from www.wetterzentrale.de</h3>	
 	</div>
 </body>
 </html>
