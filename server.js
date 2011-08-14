@@ -1,17 +1,10 @@
-var sys = require('sys'),
-    http = require('http'),
-    fs = require('fs'),
-    index;
- 
-fs.readFile('./weather.forecast.html', function (err, data) {
-    if (err) {
-        throw err;
-    }
-    index = data;
+var express = require("express");
+var app = express.createServer();
+
+app.use("/js", express.static(__dirname + '/web/js'));
+app.use("/img", express.static(__dirname + '/web/img'));
+app.use("/css", express.static(__dirname + '/web/css'));
+app.get('/', function(req, res){
+	res.sendfile('web/weather.forecast.html');
 });
- 
-http.createServer(function(request, response) {
-    response.writeHeader(200, {"Content-Type": "text/html"});
-    response.write(index);
-    response.close();
-}).listen(8000);
+app.listen(8000);
