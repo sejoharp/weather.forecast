@@ -4,5 +4,5 @@ This page displays the weather forecast for middle europe. It uses the infos fro
 # used projects
 * http://www.wetterzentrale.de
 * jquery
-* Yahoo! Query Language
-* highslide  
+* highslide
+
